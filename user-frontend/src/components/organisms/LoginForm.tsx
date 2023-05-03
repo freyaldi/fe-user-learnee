@@ -19,14 +19,14 @@ const LoginForm = (props: LoginFormProps): JSX.Element => {
     navigate("/");
   };
   return (
-    <div className="mx-auto w-1/4  flex flex-col gap-8 border border-black p-10 backdrop-blur-lg bg-white bg-opacity-20 shadow-lg">
+    <div className="mx-auto my-32 w-1/4  flex flex-col gap-8 border border-black p-8 backdrop-blur-lg bg-white bg-opacity-20 shadow-2xl">
       <Heading text="Login to Learnee" className="font-semibold text-3xl" />
       <InputBar
         label="Email"
         placeholder="abcupid@gmail.com"
         error={false}
         errorMessage="email field must be field"
-        className="rounded-sm w-3/4 p-3 border border-black p-auto"
+        className="mx-auto w-3/4"
       />
       <InputBar
         label="Password"
@@ -34,7 +34,7 @@ const LoginForm = (props: LoginFormProps): JSX.Element => {
         typeInput="Password"
         error={false}
         errorMessage="password field must be field"
-        className="rounded-sm w-3/4 p-3 border border-black p-auto"
+        className="mx-auto w-3/4"
       />
       <Button
         name="Login"
