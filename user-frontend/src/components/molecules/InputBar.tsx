@@ -18,10 +18,10 @@ type InputBarProps = {
 
 const InputBar = (props: InputBarProps): JSX.Element => {
   return (
-    <div>
-      <Label label={props.label}/>
+    <div className={props.className}>
+      <Label label={props.label} className="float-left"/>
       <InputText
-        className={props.className}
+        className="rounded-sm w-full p-3 border border-black"
         placeholder={props.placeholder}
         value={props.value}
         typeInput={props.typeInput}

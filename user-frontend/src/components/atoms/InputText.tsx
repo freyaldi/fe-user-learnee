@@ -12,7 +12,7 @@ type InputTextProps = {
 
 const InputText = (props: InputTextProps): JSX.Element => {
   return (
-    <div>
+    <div className="w-full">
       <input
         placeholder={props.placeholder}
         className={props.className}

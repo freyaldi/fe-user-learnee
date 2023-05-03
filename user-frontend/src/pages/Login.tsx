@@ -3,7 +3,7 @@ import LoginForm from "../components/organisms/LoginForm";
 
 const Login = () => {
   return (
-    <div className="">
+    <div>
       <LoginForm />
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logo-with-text.png";
 import { AuthContext } from "../../hooks/AuthContext";
 
 const Navbar = (): JSX.Element => {
@@ -11,13 +11,13 @@ const Navbar = (): JSX.Element => {
     };
 
   return (
-    <div className="flex justify-end w-full p-8">
-      <nav className="flex justify-center space-x-10 gap-4">
+    <div className="flex justify-end w-full p-4 border border-b-black">
+      <nav className="flex justify-center space-x-8 gap-4">
         <NavLink
           to={"/"}
-          className="font-bold px-3 py-2 hover:text-violet-800"
+          className="font-bold px-3 py-2"
         >
-          <img src={Logo} alt="" className="h-8" />
+          <img src={Logo} alt="" className="h-7 hover:drop-shadow-xl" />
         </NavLink>
         <NavLink
           to={"/courses"}
