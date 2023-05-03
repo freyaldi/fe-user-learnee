@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import AuthProvider, { AuthContext } from "./hooks/AuthContext";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import NotFound from "./pages/NotFound";
 
 const ProtectedRoutes = () => {
   const { authenticated } = useContext(AuthContext);
@@ -50,8 +51,8 @@ const App = (): JSX.Element => {
                 <Route path="cart" element={<h1>Cart</h1>} />
                 <Route path="profile" element={<h1>Profile</h1>} />
               </Route>
+              <Route path="*" element={<NotFound />} />
             </Route>
-            <Route path="*" element={<h1>404 Not Found</h1>} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
