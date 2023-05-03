@@ -1,10 +1,11 @@
 import React from "react";
 import InputText from "../atoms/InputText";
 import Error from "../atoms/Error";
+import Label from "../atoms/Label";
 
 type InputBarProps = {
   className?: string;
-  label?: string;
+  label: string;
   placeholder: string;
   value?: string;
   typeInput?: string;
@@ -18,6 +19,7 @@ type InputBarProps = {
 const InputBar = (props: InputBarProps): JSX.Element => {
   return (
     <div>
+      <Label label={props.label}/>
       <InputText
         className={props.className}
         placeholder={props.placeholder}

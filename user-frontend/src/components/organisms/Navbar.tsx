@@ -2,27 +2,26 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { AuthContext } from "../../hooks/AuthContext";
-import Button from "../atoms/Button";
 
 const Navbar = (): JSX.Element => {
   const { authenticated, setAuthenticated } = useContext(AuthContext);
 
-    const handleClickLogout: React.MouseEventHandler<HTMLButtonElement> = () => {
+    const handleClickLogout: React.MouseEventHandler<HTMLAnchorElement> = () => {
       setAuthenticated(false);
     };
 
   return (
-    <div className="flex justify-end w-full fixed z-20 top-0 left-0 p-8">
+    <div className="flex justify-end w-full p-8">
       <nav className="flex justify-center space-x-10 gap-4">
         <NavLink
           to={"/"}
-          className="font-bold px-3 py-2 text-[#737373] hover:text-slate-900"
+          className="font-bold px-3 py-2 hover:text-violet-800"
         >
           <img src={Logo} alt="" className="h-8" />
         </NavLink>
         <NavLink
           to={"/courses"}
-          className="font-bold px-3 py-2 text-[#737373] hover:text-slate-900"
+          className="font-bold px-3 py-2 hover:text-violet-800"
         >
           Courses
         </NavLink>
@@ -30,13 +29,13 @@ const Navbar = (): JSX.Element => {
           <>
             <NavLink
               to={"/login"}
-              className="font-bold px-3 py-2 text-[#737373] hover:text-slate-900"
+              className="font-bold px-3 py-2 hover:text-violet-800"
             >
               Login
             </NavLink>
             <NavLink
               to={"/register"}
-              className="font-bold px-3 py-2 text-[#737373] hover:text-slate-900"
+              className="font-bold px-3 py-2 hover:text-violet-800"
             >
               Register
             </NavLink>
@@ -46,19 +45,20 @@ const Navbar = (): JSX.Element => {
           <>
             <NavLink
               to={"/cart"}
-              className="font-bold px-3 py-2 text-[#737373] hover:text-slate-900"
+              className="font-bold px-3 py-2 hover:text-violet-800"
             >
               Cart
             </NavLink>
             <NavLink
               to={"/profile"}
-              className="font-bold px-3 py-2 text-[#737373] hover:text-slate-900"
+              className="font-bold px-3 py-2 hover:text-violet-800"
             >
               Profile
             </NavLink>
+            <NavLink to={"/"} className="font-bold px-3 py-2 hover:text-violet-800" onClick={handleClickLogout}>Logout</NavLink>
+            {/* <Button name={"Logout"} onClick={handleClickLogout} className="font-bold px-3 py-2 text-[#737373] hover:text-violet-800"/> */}
           </>
         )}
-        <Button name={"Logout"} onClick={handleClickLogout} className="font-bold px-3 py-2 text-[#737373] hover:text-slate-900"/>
       </nav>
     </div>
   );

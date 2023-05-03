@@ -10,6 +10,7 @@ import {
 import Layout from "./components/templates/Layout";
 import Home from "./pages/Home";
 import AuthProvider, { AuthContext } from "./hooks/AuthContext";
+import Login from "./pages/Login";
 
 const ProtectedRoutes = () => {
   const { authenticated } = useContext(AuthContext);
@@ -39,9 +40,9 @@ const App = (): JSX.Element => {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
+              <Route path="courses" element={<h1>courses</h1>} />
               <Route element={<UnprotectedRoutes />}>
-                <Route path="courses" element={<h1>courses</h1>} />
-                <Route path="login" element={<h1>login</h1>} />
+                <Route path="login" element={<Login />} />
                 <Route path="register" element={<h1>Register</h1>} />
               </Route>
               <Route element={<ProtectedRoutes />}>
