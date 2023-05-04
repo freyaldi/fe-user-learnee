@@ -17,7 +17,7 @@ const Navbar = (): JSX.Element => {
           to={"/"}
           className="font-bold px-3 py-2"
         >
-          <img src={Logo} alt="" className="h-7 hover:drop-shadow-xl" />
+          <img src={Logo} alt="" className="h-7 hover:opacity-50" />
         </NavLink>
         <NavLink
           to={"/courses"}

@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import TrendingSection from "../components/organisms/TrendingSection";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+        <TrendingSection/>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
