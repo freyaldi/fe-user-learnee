@@ -4,7 +4,7 @@ import TrendingSection from "../components/organisms/TrendingSection";
 const Home = () => {
   return (
     <div>
-        <TrendingSection/>
+      <TrendingSection />
     </div>
   );
 };
