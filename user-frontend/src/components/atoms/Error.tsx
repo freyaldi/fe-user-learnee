@@ -10,7 +10,7 @@ const Error = (props: ErrorProps): JSX.Element => {
   return (
     <>
       {props.error && (
-        <span className={props.className}>{props.errorMessage}</span>
+        <div className="text-red-500 absolute">{props.errorMessage}</div>
       )}
     </>
   );
