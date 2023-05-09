@@ -26,6 +26,8 @@ const InputBar = (props: InputBarProps): JSX.Element => {
         value={props.value}
         typeInput={props.typeInput}
         isDisabled={props.isDisabled}
+        onChange={props.onChange}
+        onBlur={props.onBlur}
       />
       <Error error={props.error} errorMessage={props.errorMessage} />
     </div>

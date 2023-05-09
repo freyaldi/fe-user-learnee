@@ -14,6 +14,7 @@ const Card = () => {
           SUMMARY DESCRIPTION: Lorem ipsum dolor sit amet.
         </p>
       </div>
+      
       <div className="px-6 pt-4 pb-2">
         <span className="inline-block bg-violet-800 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">
           CATEGORY
