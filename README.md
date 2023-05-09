@@ -28,3 +28,13 @@ npm run build
 Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. Your app is ready to be deployed. 
 
 Don't forget to run the API Server First!
+
+## Screenshot
+### Home Page
+![homepage](assets/homepage.png)
+
+### Login Page
+![loginpage](assets/loginpage.png)
+
+### Register Page
+![registerpage](assets/registerpage.png)
